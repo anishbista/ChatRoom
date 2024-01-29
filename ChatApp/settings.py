@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 ASGI_APPLICATION = "ChatApp.asgi.application"
+CHANNEL_LAYERS = {
+    "default": {"BACKEND": "channels.layers.InMemoryChannelLayer"},
+}
+
+LOGIN_REDIRECT_URL = "chat-page"
+LOOUT_REDIRECT_URL = "login-user"
 
 
 # Application definition
